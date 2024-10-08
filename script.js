@@ -34,7 +34,7 @@ $(document).ready(function () {
     event.preventDefault();
     window.open(
       "https://twitter.com/intent/tweet?text=" +
-        encodeURIComponent(quote + "--Said by" + author)
+        encodeURIComponent(quote + "--Quote by" + author)
     );
   });
 });
