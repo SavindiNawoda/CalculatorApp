@@ -2,7 +2,12 @@ $(document).ready(function () {
   var quote;
   var author;
 
+  // Function to get new quote  
   function getNewQuote() {
+    // show loading animation
+    $(".loading-svg").show();
+    $("#text").text("");
+    $("#author").text("");
     $.ajax({
       url: "http://api.forismatic.com/api/1.0/",
       jsonp: "jsonp",
@@ -21,6 +26,8 @@ $(document).ready(function () {
         } else {
           $("#author").text("Unknown");
         }
+        //hide loading animation
+        $(".loading-svg").hide();
       },
     });
   }
